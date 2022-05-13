@@ -1,0 +1,106 @@
+:root {
+   --primary-theme-color: #20232a;
+   --secondary-theme-color: #282c34;
+   --text-color: #fff;
+   --primary-shadow-color: #8888;
+   --secondary-shadow-color: #21242c80;
+   --button-color: #61dafb;
+   --button-color-active: #fff;
+   --button-text-color: #000;
+   --primary-highlight-color: #61dafb;
+   --secondary-highlight-color: #ffd700;
+   --padding-section: 4rem 0;
+   --padding-container: 0 2rem;
+   --max-width-container: 1280px;
+   --border-radius: 0.5rem;
+   --all-transition: all 0.25s;
+}
+
+.body {
+   background-color: var(--secondary-theme-color);
+   margin: 0;
+   color: var(--text-color);
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   min-height: 200vh;
+}
+
+.header {
+   background-color: var(--secondary-shadow-color);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+
+.header-nav {
+   padding: 0.5em 0;
+}
+
+.header-nav__container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: var(--padding-container);
+
+}
+
+.header-nav__link-logo-container {
+   position: relative;
+   display: flex;
+   border-radius: 50%;
+   overflow: hidden;
+   height: 3rem;
+   transition: var(--all-transition);
+
+}
+
+.header-nav__link-logo-container:hover {
+   transform: scale(1.15);
+}
+
+.header-nav__link-logo {
+   height: 100%;
+}
+
+.header-nav__menu-link-list {
+   display: flex;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   gap: 1rem;
+
+}
+
+.header-nav__menu-link-item {
+   display: flex;
+}
+
+.header-nav__menu-link {
+   color: var(--text-color);
+   position: relative;
+   text-decoration: none;
+   font-weight: bold;
+   transition: var(--all-transition);
+}
+
+.header-nav__menu-link:hover {
+   color: var(--primary-highlight-color);
+   transform: scale(1.05);
+}
+
+.header-nav__menu-link::after {
+   content: '';
+   position: absolute;
+   background-color: var(--secondary-highlight-color);
+   height: 0.0625rem;
+   width: 0;
+   bottom: -0.15rem;
+   left: 0;
+   transition: var(--all-transition);
+
+}
+
+.header-nav__menu-link:hover::after {
+   width: 100%;
+
+}
