@@ -22,6 +22,7 @@
   color: var(--text-color);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   min-height: 200vh;
+
 }
 
 .header {
@@ -41,6 +42,8 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--padding-container);
+  max-width: var(--max-width-container);
+  margin: auto;
 
 }
 
@@ -56,19 +59,51 @@
 
 .header-nav__link-logo-container:hover {
   transform: scale(1.15);
+  box-shadow: 0 0 0.5rem 0 var(--primary-highlight-color);
 }
 
 .header-nav__link-logo {
   height: 100%;
 }
 
-.header-nav__menu-link-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  gap: 1rem;
+.header-nav__menu-icon-label {
+  cursor: pointer;
+  font-size: 2rem;
+  transition: var(--all-transition);
+}
 
+.header-nav__menu-icon-label:hover {
+  text-shadow:
+    0 0 0.25rem var(--primary-highlight-color),
+    0 0 0.5rem var(--primary-highlight-color);
+}
+
+.header-nav__menu-icon-checkbox {
+  display: none;
+}
+
+.header-nav__menu-icon-checkbox:checked + .header-nav__menu-link-list {
+   left: 0;
+  }
+  
+  .header-nav__menu-link-list {
+    position: fixed;
+    top: 4rem;
+    left: 100%;
+    width: 100vw;
+    height: calc(100vh - 4rem);
+    background-color: var(--primary-shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 2.5rem;
+    transition: var(--all-transition);
+
+    
 }
 
 .header-nav__menu-link-item {
@@ -85,7 +120,7 @@
 
 .header-nav__menu-link:hover {
   color: var(--primary-highlight-color);
-  transform: scale(1.05);
+
 }
 
 .header-nav__menu-link::after {
