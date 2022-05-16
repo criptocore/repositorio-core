@@ -20,7 +20,7 @@
   background-color: var(--secondary-theme-color);
   margin: 0;
   color: var(--text-color);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   min-height: 200vh;
 
 }
@@ -44,7 +44,6 @@
   padding: var(--padding-container);
   max-width: var(--max-width-container);
   margin: auto;
-
 }
 
 .header-nav__link-logo-container {
@@ -54,7 +53,6 @@
   overflow: hidden;
   height: 3rem;
   transition: var(--all-transition);
-
 }
 
 .header-nav__link-logo-container:hover {
@@ -90,8 +88,8 @@
     position: fixed;
     top: 4rem;
     left: 100%;
-    width: 100vw;
-    height: calc(100vh - 4rem);
+    width: 100%;
+    height: calc(100% - 4rem);
     background-color: var(--primary-shadow-color);
     display: flex;
     flex-direction: column;
@@ -101,9 +99,7 @@
     padding: 0;
     list-style: none;
     gap: 2.5rem;
-    transition: var(--all-transition);
-
-    
+    transition: var(--all-transition);    
 }
 
 .header-nav__menu-link-item {
@@ -114,11 +110,12 @@
   color: var(--text-color);
   position: relative;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400;
   transition: var(--all-transition);
 }
 
-.header-nav__menu-link:hover {
+.header-nav__menu-link:hover,
+.header-nav__menu-link--active {
   color: var(--primary-highlight-color);
 
 }
@@ -132,10 +129,24 @@
   bottom: -0.15rem;
   left: 0;
   transition: var(--all-transition);
-
 }
 
-.header-nav__menu-link:hover::after {
+.header-nav__menu-link:hover::after,
+.header-nav__menu-link--active::after {
   width: 100%;
+}
 
+@media (min-width: 854px) {
+  :root {
+    --padding-container: 0 0.75rem;}
+  .header-nav__menu-icon-label {
+    display: none; 
+  }
+  .header-nav__menu-link-list {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    flex-direction: row;  
+    list-style: none;  
+}
 }
