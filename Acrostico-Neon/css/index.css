@@ -1,0 +1,110 @@
+:root {
+  --primary-theme-color: #ff1493;
+  --secondary-theme-color: #480268;
+  --text-color: #fff;
+  --primary-shadow-color: #8888;
+  --secondary-shadow-color: #21242c80;
+  --button-color: #61dafb;
+  --button-color-active: #fff;
+  --button-text-color: #000;
+  --primary-highlight-color: #61dafb;
+  --secondary-highlight-color: #ffd700;
+  --padding-section: 4rem 0;
+  --padding-container: 0 2rem;
+  --max-width-container: 1280px;
+  --border-radius: 0.5rem;
+  --all-transition: all 0.25s;
+  --letter-color-1: #00bef8;
+  --letter-color-2: #ff06c9;
+  --letter-color-3: #ff8800;
+  --letter-color-4: #ffe600;
+  --letter-color-5: #b700ff;
+  --letter-color-6: #ff9900;
+  --letter-color-7: #ff06c9;
+  --letter-color-8: #00bef8;
+}
+
+.body {
+  /* background-image: linear-gradient( to bottom, var(--primary-theme-color), var(--secondary-theme-color)); */
+  background-image: radial-gradient(var(--primary-theme-color), var(--secondary-theme-color));
+  font-family: 'Acme', sans-serif;
+  margin: 0;
+}
+
+.main {}
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover__name {
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.cover__name-letter {
+  position: relative;
+  transition: var(--all-transition);
+}
+
+.cover__name-letter:hover {
+  filter: brightness(250%);
+}
+
+.cover__name-letter:nth-child(1) {
+  color: var(--letter-color-1);
+}
+
+.cover__name-letter:nth-child(2) {
+  color: var(--letter-color-2);
+}
+
+.cover__name-letter:nth-child(3) {
+  color: var(--letter-color-3);
+}
+
+.cover__name-letter:nth-child(4) {
+  color: var(--letter-color-4);
+}
+
+.cover__name-letter:nth-child(5) {
+  color: var(--letter-color-5);
+}
+
+.cover__name-letter:nth-child(6) {
+  color: var(--letter-color-6);
+}
+
+.cover__name-letter:nth-child(7) {
+  color: var(--letter-color-7);
+}
+
+.cover__name-letter:nth-child(8) {
+  color: var(--letter-color-8);
+}
+
+.cover__name-letter::before {
+  content: var(--letter);
+  position: absolute;
+  transform: scale(1.125); 
+  filter: blur(1rem);
+}
+
+.cover__name-letter::after {
+  content: var(--letter);
+  position: absolute;
+  left: 0;
+  top: 80%;
+  filter: blur(0.25rem);
+  transform: rotateX(150deg);
+}
+
+@media (min-width: 854px) {
+  .cover__name {
+      font-size: 8rem;
+    }
+  }
