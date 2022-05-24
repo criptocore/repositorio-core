@@ -38,6 +38,7 @@
 }
 
 .profile {
+   position: relative;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -45,6 +46,16 @@
    background-size: cover;
    background-position: center;
    min-height: 100vh;
+}
+
+.profile::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 6rem;
+   background-image: linear-gradient(transparent, var(--primary-theme-color));
 }
 
 .profile__container {
@@ -176,22 +187,27 @@
    .profile__info-description {
       display: flex;
    }
-.profile__container {
+
+   .profile__container {
       display: grid;
       grid-template-columns: 1fr 1fr;
    }
-.profile__info-title {
+
+   .profile__info-title {
       font-size: 2rem;
    }
-.profile__info-subtitle {
+
+   .profile__info-subtitle {
       font-size: 2.3rem;
    }
-.profile__info-description {
-      font-size: 1.5rem;
+
+   .profile__info-description {
+      font-size: 1rem;
       text-align: justify;
    }
+
    .profile__figure-image-container {
       max-width: 360px;
    }
-   
+
 }
