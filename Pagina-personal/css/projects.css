@@ -50,7 +50,18 @@
    flex-direction: column;
    gap: 1.5rem;
    background-color: var(--secondary-theme-color);
-
+   box-shadow:
+   0 0 0 0.125rem var(--primary-shadow-color),
+   0 0 0 0.25rem var(--primary-shadow-color);
+   border-radius: var(--border-radius);
+   overflow: hidden;
+   transition: var(--all-transition);
+}
+.projects__projects-item:hover {
+   box-shadow:
+   0 0 0 0.25rem var(--primary-highlight-color),
+   0 0 0.25rem 0.25rem var(--secondary-highlight-color);
+   transform: scale(1.05);
 }
 
 .projects__item-img-container {
@@ -74,6 +85,7 @@
 
 .projects__item-data-title {
 margin: 0;
+text-shadow: 0 0 0.125rem var(--primary-highlight-color);
 }
 
 .projects__item-data-core-technology {
@@ -82,10 +94,13 @@ margin: 0;
 
 .projects__item-data-technologies {
    margin: 0;
+   text-shadow: 0 0 0.125rem var(--primary-highlight-color);
+   font-weight: 500;
 }
 
 .projects__item-data-about {
    margin: 0;
+   font-weight: 300;
 }
 
 .projects__item-button-container {
@@ -93,14 +108,29 @@ margin: 0;
    gap: 3rem;
    justify-content: center;
    padding: 0 0 1rem 0;
+   margin-top: auto;
 }
 
 .projects__item-button {
    text-decoration: none;
    font-weight: 700;
    background-color: var(--button-color);
-   padding: 0.5rem;
-   border: 0.0625rem solid var(--button-color             );
+   padding: 0.5em 1em;
+   border: 0.0625rem solid var(--button-color);
    border-radius: var(--border-radius);
    color: var(--button-text-color);
+   transition: var(--all-transition);
+}
+.projects__item-button--bg-gold {
+   background-color: var(--secondary-highlight-color);
+   border: 0.0625rem solid var(--secondary-highlight-color);
+}
+.projects__item-button:hover {
+   background-color: var(--button-color-active);   
+}
+
+@media (min-width: 854px) {
+   .projects__projects-list {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
 }
