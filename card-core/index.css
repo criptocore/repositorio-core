@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(../card-core/image/background.jpg);
+  background-image: url(./image/background.jpg);
   background-position: center;
   background-size: cover;
   margin: 0;
