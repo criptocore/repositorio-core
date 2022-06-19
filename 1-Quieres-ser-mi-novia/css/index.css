@@ -1,0 +1,42 @@
+.body {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-color: crimson;
+   color: white;
+   margin: 0;
+}
+.hero {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.hero__title {
+text-align: center;
+}
+.hero__image-container {
+max-width: 356px;
+border-radius: 50%;
+overflow: hidden;
+box-shadow: 0 0.3rem 0.5rem 0 black;
+}
+.hero__image {
+width: 100%;
+}
+.hero__button {
+font-family: 'Courier New', Courier, monospace;
+background-color: white;
+border: 0.125rem solid black;
+border-radius: 1rem;
+letter-spacing: 0.125rem;
+font-weight: bold;
+cursor: pointer;
+margin: 1em;
+padding: 1em;
+transition: all 0.5s;
+}
+.hero__button:hover {
+box-shadow: 0 0.5rem 0.5rem 0 black;
+filter: brightness(125%);
+transform: scale(1.1);
+}
